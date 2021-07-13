@@ -26,9 +26,9 @@ def test_put():
     assert res.status_code == 200
     assert Info.query.get(1).title == 'TEST TITLE'
 
-# def test_delete():
-#     res = client.delete('/data/1')
+def test_delete():
+    res = client.delete('/data/1')
 
-#     assert res.status_code == 204
-#     assert Info.query.get(1) is None
+    assert res.status_code == 204
+    assert Info.query.get(1) is None
 
